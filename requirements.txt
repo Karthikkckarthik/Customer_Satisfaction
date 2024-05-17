@@ -3,14 +3,9 @@ numpy
 pandas
 streamlit
 zenml
-zenml.integrations.mlflow.mlflow_utils
 mlflow
-mlflow_utils
 MLFlowModelDeployer
 MLFlowDeploymentService
-zenml.integrations.mlflow.services
-src.model_dev
 LinearRegressionModel
-sklearn.base
 RegressorMixin
 ModelNameConfig
