@@ -1,6 +1,34 @@
-"Predicting customer feelings before they buy a product"
+"Predicting Pre-Order Customer Sentiment for Products"
 
-If you try executing the code along with the YouTuber, then at some point in time, you will get an error that "Daemon functionality is not supported on Windows". Therefore, to resolve this issue, you need to install WSL (Windows subsystem for Linux) and Ubuntu, on your Windows laptop/computer. To install WSL and Ubuntu, just run your command prompt as Administrator and run the below command:
+Project Overview:
+This project aims to predict customer satisfaction scores using a ZenML pipeline and historical data from the Brazilian E-Commerce Public Dataset by Olist. Our goal is to develop a machine learning model that predicts review scores for future orders, framed as a regression problem.
+
+Key Features:
+
+Dataset: Utilizes a dataset containing 100,000 orders from 2016-2018 across multiple Brazilian marketplaces, with details on order status, price, payment, shipping, customer locations, product attributes, and reviews.
+Model Objective: Predict customer review scores for future orders, resulting in a satisfaction score ranging from 1 to 5.
+Pipeline: End-to-end machine learning pipeline built with ZenML, including data collection, preprocessing, feature engineering, model training, and deployment.
+Deployment: Showcases the model via a user-friendly Streamlit application and MLflow UI interface.
+Cloud-Ready: Workflow designed for cloud deployment and scalability, ensuring all parameters and data flow are tracked.
+Pipeline Steps:
+
+Data Ingestion: Ingests data from the source and creates a DataFrame.
+Data Cleaning: Removes unnecessary columns and fills null values with the mean.
+Model Training: Trains models (e.g., XGBoost, LightGBM, Random Forest) with MLflow autologging for performance tracking.
+Evaluation: Evaluates model performance and saves metrics using MLflow autologging.
+Deployment Trigger: Checks if the newly trained model meets criteria for deployment.
+Model Deployment: Deploys the model as a service using MLflow.
+Technology Stack:
+
+ZenML: Framework for building and orchestrating ML pipelines.
+MLflow: Used for tracking metrics, parameters, and model deployment.
+Streamlit: Provides an interactive UI for showcasing the predictive model.
+LightGBM: Final model used for regression analysis.
+Conclusion:
+This project demonstrates an end-to-end machine learning solution for predicting customer satisfaction, showcasing continuous prediction and deployment capabilities with ZenML, MLflow, and Streamlit. The model is cloud-ready and adaptable to varying business needs, ensuring robust tracking and scalability.
+
+
+"Daemon functionality is not supported on Windows". Therefore, to resolve this issue, you need to install WSL (Windows subsystem for Linux) and Ubuntu, on your Windows laptop/computer. To install WSL and Ubuntu, just run your command prompt as Administrator and run the below command:
 
 wsl --install
 
