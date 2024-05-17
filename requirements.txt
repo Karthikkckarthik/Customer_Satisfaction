@@ -23,5 +23,4 @@ src.model_dev
 LinearRegressionModel
 sklearn.base
 RegressorMixin
-.config
 ModelNameConfig
